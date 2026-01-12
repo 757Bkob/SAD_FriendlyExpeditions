@@ -1,0 +1,408 @@
+sep=,
+ID,Text,Translation,VoiceActor,Context
+324149621143,Hunting ground [FFE],,,ModItemExpeditionPreset HuntingGrounds display_name
+820328298589,"A field overgrown with very large plants, Herbivores must be scarce for some reason or another!
+
+Sending a survivor with a high Combat or Farming skill will improve the hunting results.",,,ModItemExpeditionPreset HuntingGrounds description
+281595998345,"I can see a pasture frequented by herbivores!
+
+It could prove to be a good hunting ground, so I'll jot down this location for future visits.",,,ModItemExpeditionPreset HuntingGrounds FoundByExplorationDisplayText
+644162164523,Select someone with Combat skill above 0!,,,ModItemExpeditionPreset HuntingGrounds Text
+447199576875,The ground is frozen and no animals come to graze.,,,ModItemExpeditionPreset HuntingGrounds Text
+798742557866,A pack of predators has been killing the herbivores. They are scared to visit the pasture for a while.,,,ModItemExpeditionPreset HuntingGrounds Text
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+732965663433,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit Site_HuntingGrounds_Predator NotificationText
+300625514328,A predator!,,,ModItemStoryBit Site_HuntingGrounds_Predator Title
+287185450262,"I visited the pasture, only to find just a couple of animals grazing there.
+
+I had just found a good ambush spot when I spotted a predator preparing to do pretty much what I was planning to.
+We can attack one while it's concentrated on the hunt, or take the kill from it.",,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+555943227486,Go for it.,,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+527690183123,low Combat skill; high risk of injury,,,ModItemStoryBit Site_HuntingGrounds_Predator CustomOutcomeText
+966020577963,Go for it.,,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+361681278538,high Combat skill; low risk of injury,,,ModItemStoryBit Site_HuntingGrounds_Predator CustomOutcomeText
+326507544253,Try to Pacify it,,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+568500356420,low Farming skill; high risk of injury,,,ModItemStoryBit Site_HuntingGrounds_Predator CustomOutcomeText
+304162595197,Try to Pacify it,,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+679139934708,high Farming skill; low risk of injury,,,ModItemStoryBit Site_HuntingGrounds_Predator CustomOutcomeText
+751423996253,"Leave it be, it's not worth the risk.",,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+532706080657,Leave it be. It has to feed too.,,,ModItemStoryBit Site_HuntingGrounds_Predator Text
+418019600224,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame NotificationText
+857560244569,Victory!,,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame Title
+343304395624,"I trapped the predator! I actually did it! - laid out torches to drive anything else away.
+
+After a few hours and some relatively easy to collect meat, I was able to teach it some basic commands.
+We now have a new friend.",,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame Text
+932426349419,Wonderful!,,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame Text
+120030107091,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame_Minor NotificationText
+790976801498,Victory!,,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame_Minor Title
+147837022977,"I laid a trap, but it still must have had my scent on it too much.
+That being said, after a few hours a weaker predator finally fell for the lure.
+
+It was surprisingly very food motivated, and it quickly learned I am better alive than dead!
+",,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame_Minor Text
+215386322487,Wonderful!,,,ModItemStoryBit Site_HuntingGrounds_Predator_Tame_Minor Text
+969647485847,Shrieking noises [FFE],,,ModItemExpeditionPreset Shrieker display_name
+922205485638,Weird shrieking noises have been heard from this direction.,,,ModItemExpeditionPreset Shrieker description
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+831213253315,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit Site_Shrieker NotificationText
+918761004266,A spike-tailed insect,,,ModItemStoryBit Site_Shrieker Title
+194940582683,"A spike-tailed insect has made a small lair between some rocks. It looks to be alone... for now.
+
+This might be a good chance to observe its kind from a safe distance.",,,ModItemStoryBit Site_Shrieker Text
+864320467667,Observe away! It may be useful.,,,ModItemStoryBit Site_Shrieker Text
+824555037898,"It would've been better to kill it, but... Just come back.",,,ModItemStoryBit Site_Shrieker Text
+475904398682,"<TraitName('Pacifist',actor)> - can't fight",,,ModItemStoryBit Site_Shrieker CustomOutcomeText
+387577260573,No need to know anything about it - kill it!,,,ModItemStoryBit Site_Shrieker Text
+855175078649,low Combat skill; high risk of injury,,,ModItemStoryBit Site_Shrieker CustomOutcomeText
+622780258364,No need to know anything about it - kill it!,,,ModItemStoryBit Site_Shrieker Text
+725243675458,high Combat skill; low risk of injury,,,ModItemStoryBit Site_Shrieker CustomOutcomeText
+195322109083,I wonder if I can convince it to come home with me?,,,ModItemStoryBit Site_Shrieker Text
+457723315070,low Combat and Farming skill; high risk of injury,,,ModItemStoryBit Site_Shrieker CustomOutcomeText
+840476185687,I'm sure I can get it to like me,,,ModItemStoryBit Site_Shrieker Text
+584168273542,high Combat and Farming skill; low risk of injury,,,ModItemStoryBit Site_Shrieker CustomOutcomeText
+268230126443,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_Shrieker_tame_success NotificationText
+464625499283,Victory!,,,ModItemStoryBit Site_Shrieker_tame_success Title
+429396271153,"I managed to lure one away from the beaten path.
+After a few morsels of super salted meat, I was able to show myself to it.
+
+It must have enough intelligence to realize I can make them, and it can't.
+Because it even followed me onto the Balloon back home!
+",,,ModItemStoryBit Site_Shrieker_tame_success Text
+409601891649,Wonderful!,,,ModItemStoryBit Site_Shrieker_tame_success Text
+748493668988,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_Shrieker_tame_success_minor NotificationText
+283712461137,Victory!,,,ModItemStoryBit Site_Shrieker_tame_success_minor Title
+455029251107,"After some difficulty (And a wound or two) I managed to lure only one creature away.
+A few nuggets of super salted meat, I chanced showing myself.
+
+After a brief ""discussion"" (And spike in my leg), I managed to convey that I can make it more meat.
+So even though I'm limping back, I have a live trophy!",,,ModItemStoryBit Site_Shrieker_tame_success_minor Text
+746935043979,Wonderful!,,,ModItemStoryBit Site_Shrieker_tame_success_minor Text
+461126114505,Loud bang [FFE],,,ModItemExpeditionPreset LoudBang display_name
+189963326450,The source of the loud bang should be somewhere around here.,,,ModItemExpeditionPreset LoudBang description
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+569505610178,Expedition failed: <ExplorationSiteName>,,,ModItemStoryBit Site_Loudband_Stunned_Wildlife_Defeat NotificationText
+772290214095,Defeat!,,,ModItemStoryBit Site_Loudband_Stunned_Wildlife_Defeat Title
+659754359609,"I tried to gently break an animal out of it's stupor.... only to be met with aggression!
+
+Unfortunately, I was quite close to the thing... so I'm quite hurt.
+
+I barely escaped with my life!",,,ModItemStoryBit Site_Loudband_Stunned_Wildlife_Defeat Text
+990342462277,Oh my!,,,ModItemStoryBit Site_Loudband_Stunned_Wildlife_Defeat Text
+541423845372,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame_minor NotificationText
+461502133087,Victory!,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame_minor Title
+780861652162,"I tried to gently break an animal out of it's stupor.
+Food was placed in a line away from the site, to hopefully distract it.
+
+Unfortunately, it instead ran off.... so I selected the next best candidiate.
+
+That one obliged, and I got it alone feeling relatively safe.
+After a quick training session, it was listening to commands enough to bring it home!",,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame_minor Text
+306014779685,Wonderful!,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame_minor Text
+854538264277,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame NotificationText
+416698324500,Victory!,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame Title
+248615547201,"I tried to gently break an animal out of it's stupor.
+Food was placed in a line away from the site, to hopefully distract it.
+
+Thankfully it obliged, and I got it alone feeling relatively safe.
+After a quick training session, it was listening to commands enough to bring it home!
+",,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame Text
+992852798416,Wonderful!,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife_Tame Text
+727837464265,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife NotificationText
+669331576160,Victory!,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife Title
+171579766991,"As I landed, I found animals in scattered positions.
+When I started walking around, none of them seemed to notice me.
+
+Whatever happened, it must have put these things into a stupor!
+These would make for easy hunting, or I can try and safely tame one for our base.",,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife Text
+721473781992,Slaughter some and bring back their meat,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife Text
+334089350437,Try and tame one,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife Text
+957982269170,"High Farming skill, low risk of injury",,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife CustomOutcomeText
+463090604446,Try and tame one,,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife Text
+247051225866,"Low Farming skill, moderate risk of injury",,,ModItemStoryBit Site_LoudBang_Stunned_Wildlife CustomOutcomeText
+647347850229,Idyllic Field [FFE],,,ModItemExpeditionPreset GrazingFields display_name
+640619770653,"A field that is well grazed, it must be safer for herbivores here!
+
+Sending a survivor with high Combat or Farming skill will improve the hunting results.",,,ModItemExpeditionPreset GrazingFields description
+588548889021,"I'm witnessing another eerie mist gliding through the jungle. Its behavior is far from ordinary, it's as if it's leading me somewhere.",,,ModItemExpeditionPreset GrazingFields FoundByExplorationDisplayText
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+334416212883,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit site_grazing_fields_hunt_failure NotificationTitle
+759736986954,Failure,,,ModItemStoryBit site_grazing_fields_hunt_failure Title
+413130945335,"The herd seemed quite invested in not letting me get any of them...
+Worst case, they fought back!
+
+I left before I could suffer any major wounds.",,,ModItemStoryBit site_grazing_fields_hunt_failure Text
+565086727504,Unfortunate,,,ModItemStoryBit site_grazing_fields_hunt_failure Text
+945993897286,low Farming skill; high risk of injury,,,ModItemStoryBit site_grazing_fields_hunt_failure CustomOutcomeText
+269195717926,Failure,,,ModItemStoryBit site_grazing_fields_hunt_failure Title
+678396400677,"The herd seemed quite invested in not letting me get any of them...
+Worst case, they fought back!
+
+I left before I could suffer any major wounds.",,,ModItemStoryBit site_grazing_fields_hunt_failure Text
+173971592982,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit site_grazing_fields_hunt_success NotificationTitle
+559720591325,Failure,,,ModItemStoryBit site_grazing_fields_hunt_success Title
+872926454072,"I set a diversion and the herd took the bait.
+They started running away, and I managed to trip the stragglers.
+
+As I was butchering and cleaning the body, a very eerie calm descended....
+Regardless we now have some food for the colony!",,,ModItemStoryBit site_grazing_fields_hunt_success Text
+473087122959,Great Success,,,ModItemStoryBit site_grazing_fields_hunt_success Text
+674751641240,low Farming skill; high risk of injury,,,ModItemStoryBit site_grazing_fields_hunt_success CustomOutcomeText
+231210872623,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit site_grazing_fields_hunt_failure_large NotificationTitle
+197883140733,Failure,,,ModItemStoryBit site_grazing_fields_hunt_failure_large Title
+338125021256,"The herd seemed quite invested in not letting me get any of them...
+Worst case, they fought back!
+
+They caught me and made sure to give me many solid wounds....
+I'm lucky to escape with my life!",,,ModItemStoryBit site_grazing_fields_hunt_failure_large Text
+151646586364,Unfortunate,,,ModItemStoryBit site_grazing_fields_hunt_failure_large Text
+968424743903,low Farming skill; high risk of injury,,,ModItemStoryBit site_grazing_fields_hunt_failure_large CustomOutcomeText
+969100372924,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit grazing_fields_camels NotificationTitle
+316903059860,An Herbivore!,,,ModItemStoryBit grazing_fields_camels Title
+787313851048,"There are some very mild mannered quadrupedal animals in the area!
+
+Today there seems to be a larger than normal grouping of creatures slightly larger than me, with one or two humps on it's back.
+How should I proceed?",,,ModItemStoryBit grazing_fields_camels Text
+822684039796,Try to Pacify it,,,ModItemStoryBit grazing_fields_camels Text
+479667010508,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_camels CustomOutcomeText
+392071207583,Success?,,,ModItemStoryBit grazing_fields_camels Title
+119909718404,"When I approached the herd, their initial reaction was to defend its members.
+
+After a few hits, they calmed down and let me drop food for them.
+
+Multiple feedings later, one of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_camels Text
+734983430068,Success,,,ModItemStoryBit grazing_fields_camels Title
+943966769873,"When I approached the herd, they where initially quite skeptical.
+
+I dropped food for them and made sure to back off.
+
+After multiple feedings later, a few of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_camels Text
+569970588689,Failure,,,ModItemStoryBit grazing_fields_camels Title
+567494826136,"When I approached the herd, their initial reaction was to defend its members.
+After about 20 seconds of not fighting back, I had enough and quickly left.
+
+No idea what got into them..... but we will need to come back later!",,,ModItemStoryBit grazing_fields_camels Text
+852582304440,Try to Pacify it,,,ModItemStoryBit grazing_fields_camels Text
+143929333911,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_camels CustomOutcomeText
+121295382796,Success?,,,ModItemStoryBit grazing_fields_camels Title
+434020634233,"When I approached the herd, their initial reaction was to defend its members.
+
+After a few hits, they calmed down and let me drop food for them.
+
+Multiple feedings later, one of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_camels Text
+865039954422,Success,,,ModItemStoryBit grazing_fields_camels Title
+912723021203,"When I approached the herd, they where initially quite skeptical.
+
+I dropped food for them and made sure to back off.
+
+After multiple feedings later, a few of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_camels Text
+762875452189,Failure,,,ModItemStoryBit grazing_fields_camels Title
+553284784226,"When I approached the herd, their initial reaction was to defend its members.
+After about 20 seconds of not fighting back, I had enough and quickly left.
+
+No idea what got into them..... but we will need to come back later!",,,ModItemStoryBit grazing_fields_camels Text
+265362703979,Try to hunt a few,,,ModItemStoryBit grazing_fields_camels Text
+820140252658,low Combat skill; high risk of injury,,,ModItemStoryBit grazing_fields_camels CustomOutcomeText
+825275763331,Try to hunt a few,,,ModItemStoryBit grazing_fields_camels Text
+396855829225,high Combat skill; low risk of injury,,,ModItemStoryBit grazing_fields_camels CustomOutcomeText
+216621135801,"Just leave, that creature doesn't sound useful",,,ModItemStoryBit grazing_fields_camels Text
+529510081394,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_camels CustomOutcomeText
+528468034178,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit grazing_fields_shogu NotificationTitle
+614765790325,An Herbivore!,,,ModItemStoryBit grazing_fields_shogu Title
+829355721117,"There is a herd of rather portly four legged creatures here today.
+Their noses are round and quite long....
+
+How should I proceed?",,,ModItemStoryBit grazing_fields_shogu Text
+520474499130,Try to Pacify it,,,ModItemStoryBit grazing_fields_shogu Text
+564710430922,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_shogu CustomOutcomeText
+589927185902,Success?,,,ModItemStoryBit grazing_fields_shogu Title
+553034894045,"When I approached the herd, their initial reaction was to defend its members.
+
+After a few hits, they calmed down and let me drop food for them.
+
+Multiple feedings later, one of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_shogu Text
+453574711933,Success,,,ModItemStoryBit grazing_fields_shogu Title
+545437972129,"When I approached the herd, they where initially quite skeptical.
+
+I dropped food for them and made sure to back off.
+
+After multiple feedings later, a few of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_shogu Text
+839267403040,Failure,,,ModItemStoryBit grazing_fields_shogu Title
+211746939470,"When I approached the herd, they approached right back!
+But as they started to smell me, something must have spooked them.
+
+Because all of a sudden I learned that they have tusks in their mouth!
+
+No idea what got into them..... but I managed to get away with my life",,,ModItemStoryBit grazing_fields_shogu Text
+441521213724,Try to Pacify it,,,ModItemStoryBit grazing_fields_shogu Text
+230732728584,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_shogu CustomOutcomeText
+760339351093,Success?,,,ModItemStoryBit grazing_fields_shogu Title
+109903994796,"When I approached the herd, their initial reaction was to defend its members.
+
+After a few hits, they calmed down and let me drop food for them.
+
+Multiple feedings later, one of these creatures seemed quite attached to me!",,,ModItemStoryBit grazing_fields_shogu Text
+290717842549,Success,,,ModItemStoryBit grazing_fields_shogu Title
+845712111175,"When I approached the herd, they approached right back!
+Not sure how something so trusting is still alive, but that's a problem for another day.
+
+A few bites of food and some scratches later, and a few are coming home with me!",,,ModItemStoryBit grazing_fields_shogu Text
+524474177346,Failure,,,ModItemStoryBit grazing_fields_shogu Title
+661767275186,"When I approached the herd, they approached right back!
+But as they started to smell me, something must have spooked them.
+
+Because all of a sudden I learned that they have tusks in their mouth!
+
+No idea what got into them..... but I managed to get away with my life",,,ModItemStoryBit grazing_fields_shogu Text
+342850582629,Try to hunt a few,,,ModItemStoryBit grazing_fields_shogu Text
+387889771613,low Combat skill; high risk of injury,,,ModItemStoryBit grazing_fields_shogu CustomOutcomeText
+449081728218,Try to hunt a few,,,ModItemStoryBit grazing_fields_shogu Text
+931456340206,high Combat skill; low risk of injury,,,ModItemStoryBit grazing_fields_shogu CustomOutcomeText
+798152193480,"Just leave, that creature doesn't sound useful",,,ModItemStoryBit grazing_fields_shogu Text
+788373551886,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_shogu CustomOutcomeText
+288172924175,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit grazing_fields_tecatli NotificationTitle
+120811058102,An Herbivore!,,,ModItemStoryBit grazing_fields_tecatli Title
+702457560061,"There is a herd of bipedal scaled... animals?
+It's hard to tell if these things are cold or hot blooded....
+
+But I do recognize their teeth as sharp and carnivorous...
+Odd they aren't hunting the other species in the area
+
+How should I proceed?",,,ModItemStoryBit grazing_fields_tecatli Text
+251324879457,Try to Pacify it,,,ModItemStoryBit grazing_fields_tecatli Text
+868030338575,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_tecatli CustomOutcomeText
+101322916621,Success?,,,ModItemStoryBit grazing_fields_tecatli Title
+881856333784,"The herd spread out when they first detected me.
+And immediately started surrounding me. 
+
+They did not like it when I tried to maneuver away from the surrounding....
+After a few puncture wounds, they hit my pack.
+This food thankfully distracted them, and let me convince one I am a friend
+
+So we have one of these coming home with us.",,,ModItemStoryBit grazing_fields_tecatli Text
+631274798054,Success,,,ModItemStoryBit grazing_fields_tecatli Title
+793395406483,"The herd spread out when they first detected me.
+And they started to try and surround me. 
+
+They must have deemed me not a threat, because they backed down after a tense staring session.
+
+I offered them both meat and vegetables, and they reacted quite positively.
+We now have a few of them coming home!",,,ModItemStoryBit grazing_fields_tecatli Text
+735646412531,Failure,,,ModItemStoryBit grazing_fields_tecatli Title
+930995255242,"When I approached the herd, they responded with immediate aggression!
+
+Their fangs and behavior told me they are quite quick to defending themselves!
+
+Thankfully I tossed what food I had, and it distracted them enough for me to get away.",,,ModItemStoryBit grazing_fields_tecatli Text
+697931435562,Try to Pacify it,,,ModItemStoryBit grazing_fields_tecatli Text
+289535001173,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_tecatli CustomOutcomeText
+821124080922,Failure,,,ModItemStoryBit grazing_fields_tecatli Title
+922020340358,"When I approached the herd, they responded with immediate aggression!
+
+Their fangs and behavior told me they are quite quick to defending themselves!
+
+Thankfully I tossed what food I had, and it distracted them enough for me to get away.",,,ModItemStoryBit grazing_fields_tecatli Text
+321437282837,Success,,,ModItemStoryBit grazing_fields_tecatli Title
+174401448422,"The herd spread out when they first detected me.
+And they started to try and surround me. 
+
+They must have deemed me not a threat, because they backed down after a tense staring session.
+
+I offered them both meat and vegetables, and they reacted quite positively.
+We now have a few of them coming home!",,,ModItemStoryBit grazing_fields_tecatli Text
+797007991404,Success?,,,ModItemStoryBit grazing_fields_tecatli Title
+238528755805,"The herd spread out when they first detected me.
+And immediately started surrounding me. 
+
+They did not like it when I tried to maneuver away from the surrounding....
+After a few puncture wounds, they hit my pack.
+This food thankfully distracted them, and let me convince one I am a friend
+
+So we have one of these coming home with us.",,,ModItemStoryBit grazing_fields_tecatli Text
+505833540163,Try to hunt a few,,,ModItemStoryBit grazing_fields_tecatli Text
+149183354217,low Combat skill; high risk of injury,,,ModItemStoryBit grazing_fields_tecatli CustomOutcomeText
+653607563783,Try to hunt a few,,,ModItemStoryBit grazing_fields_tecatli Text
+253615866687,high Combat skill; low risk of injury,,,ModItemStoryBit grazing_fields_tecatli CustomOutcomeText
+856679409833,"Just leave, that creature doesn't sound useful",,,ModItemStoryBit grazing_fields_tecatli Text
+423554109007,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_tecatli CustomOutcomeText
+378021600463,Expedition update: <ExplorationSiteName>,,,ModItemStoryBit grazing_fields_gujo NotificationTitle
+126693164697,An Herbivore!,,,ModItemStoryBit grazing_fields_gujo Title
+769196165794,"As I touched down, I found many many giant birds chasing the regular inhabitants.
+
+The birds themselves appeared to be in different stages of malnourishment, and they should be quite easy to hunt or tame.
+What should I do? ",,,ModItemStoryBit grazing_fields_gujo Text
+854360323673,Try to Pacify a bird,,,ModItemStoryBit grazing_fields_gujo Text
+874118024529,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_gujo CustomOutcomeText
+257631550137,Success?,,,ModItemStoryBit grazing_fields_gujo Title
+813879054885,"It was quite easy to get the attention of one of the birds, and from the look in it's eyes it wanted blood.
+
+I did my best to distract it with some of my food, but it seems to lack intelligence to tell that a better meal was right next to it.....
+
+In between it's aggressively pecking of my chest, I shoved my food into it's mouth and that seemed to calm it.
+
+A few morsels later, and now I have a new friend.",,,ModItemStoryBit grazing_fields_gujo Text
+151131677367,Success,,,ModItemStoryBit grazing_fields_gujo Title
+350762703833,"It was quite easy to get the attention of one of the birds.
+I managed to pick one that seemed to have eaten recently.
+
+Thanks to that, I was able to immediately direct it to some food I had placed on the ground.
+It took a few tries for it to recognize the non-moving thing as food..... it finally seemed to understand.
+
+A Gujo who has been successful in its hunt randomly saw my new friend, and in it's.... infinite wisdom, decided to follow along.
+
+Apparently because of their lack of intelligence, I now have new friends coming home with me",,,ModItemStoryBit grazing_fields_gujo Text
+458060421549,Failure,,,ModItemStoryBit grazing_fields_gujo Title
+771339886452,"Well I got ones attention......
+One extremely aggressive, starving, and quick bird.
+
+It feels like I am now 20 kilos lighter.... but alive.
+We should be quite cautious with this species in the future.",,,ModItemStoryBit grazing_fields_gujo Text
+515998099083,Try to Pacify it,,,ModItemStoryBit grazing_fields_gujo Text
+314357636747,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_gujo CustomOutcomeText
+827452470173,Failure,,,ModItemStoryBit grazing_fields_gujo Title
+271948206341,"Well I got ones attention......
+One extremely aggressive, starving, and quick bird.
+
+It feels like I am now 20 kilos lighter.... but alive.
+We should be quite cautious with this species in the future.",,,ModItemStoryBit grazing_fields_gujo Text
+916158219598,Success,,,ModItemStoryBit grazing_fields_gujo Title
+367072099301,"It was quite easy to get the attention of one of the birds.
+I managed to pick one that seemed to have eaten recently.
+
+Thanks to that, I was able to immediately direct it to some food I had placed on the ground.
+It took a few tries for it to recognize the non-moving thing as food..... it finally seemed to understand.
+
+A Gujo who has been successful in its hunt randomly saw my new friend, and in it's.... infinite wisdom, decided to follow along.
+
+Apparently because of their lack of intelligence, I now have new friends coming home with me",,,ModItemStoryBit grazing_fields_gujo Text
+902308910927,Success?,,,ModItemStoryBit grazing_fields_gujo Title
+630111079119,"It was quite easy to get the attention of one of the birds, and from the look in it's eyes it wanted blood.
+
+I did my best to distract it with some of my food, but it seems to lack intelligence to tell that a better meal was right next to it.....
+
+In between it's aggressively pecking of my chest, I shoved my food into it's mouth and that seemed to calm it.
+
+A few morsels later, and now I have a new friend.",,,ModItemStoryBit grazing_fields_gujo Text
+668053610473,Try to hunt a few,,,ModItemStoryBit grazing_fields_gujo Text
+743518540977,low Combat skill; high risk of injury,,,ModItemStoryBit grazing_fields_gujo CustomOutcomeText
+748699632560,Try to hunt a few,,,ModItemStoryBit grazing_fields_gujo Text
+352117710093,high Combat skill; low risk of injury,,,ModItemStoryBit grazing_fields_gujo CustomOutcomeText
+955042835242,"Just leave, that creature doesn't sound useful",,,ModItemStoryBit grazing_fields_gujo Text
+560758799202,low Farming skill; high risk of injury,,,ModItemStoryBit grazing_fields_gujo CustomOutcomeText
+907449004436,test,,,ModItemExpeditionPreset test display_name
+365482481022,test,,,ModItemExpeditionPreset test description
+305361382111,<u(StoryBit)> (weight: <Weight>),,,
+452344966145,Expedition complete: <ExplorationSiteName>,,,ModItemStoryBit test NotificationText
+283449227190,Victory!,,,ModItemStoryBit test Title
+436458298190,we found something,,,ModItemStoryBit test Text
+772089123274,Wonderful!,,,ModItemStoryBit test Text

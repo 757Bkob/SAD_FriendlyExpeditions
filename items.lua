@@ -3412,4 +3412,187 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	}),
+PlaceObj('ModItemExpeditionPreset', {
+	FoundByExplorationWeight = 100000,
+	Obsolete = true,
+	StoryBits = {
+		PlaceObj('ExpeditionStoryBitWeight', {
+			'StoryBit', "test",
+		}),
+	},
+	description = T(365482481022, --[[ModItemExpeditionPreset test description]] "test"),
+	display_name = T(907449004436, --[[ModItemExpeditionPreset test display_name]] "test"),
+	id = "test",
+	mod_version_major = 1,
+	save_in = "Mod/Uqo4QkN",
+}),
+PlaceObj('ModItemStoryBit', {
+	Category = "Expedition",
+	Enabled = true,
+	FxAction = "UINotificationExpedition",
+	HasNotification = false,
+	NotificationText = T(452344966145, --[[ModItemStoryBit test NotificationText]] "Expedition complete: <ExplorationSiteName>"),
+	Obsolete = true,
+	OneTime = false,
+	PopupFxAction = "MessagePopup",
+	ScriptDone = true,
+	SelectObject = false,
+	Text = T(436458298190, --[[ModItemStoryBit test Text]] "we found something"),
+	Title = T(283449227190, --[[ModItemStoryBit test Title]] "Victory!"),
+	UseObjectImage = true,
+	group = "Expedition_FollowUP",
+	id = "test",
+	max_reply_id = 15,
+	qa_info = PlaceObj('PresetQAInfo', {
+		data = {
+			{
+				action = "Modified",
+				time = 1583342170,
+				user = "Svetlio",
+			},
+			{
+				action = "Modified",
+				time = 1583343860,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1583483931,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1585229761,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1593085279,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1594825884,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1601282702,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1602664512,
+				user = "Vihar",
+			},
+			{
+				action = "Modified",
+				time = 1608545552,
+				user = "Ivan",
+			},
+			{
+				action = "Modified",
+				time = 1609927791,
+				user = "Ivan",
+			},
+			{
+				action = "Modified",
+				time = 1609932797,
+				user = "Vihar",
+			},
+			{
+				action = "Modified",
+				time = 1610034862,
+				user = "Gaby",
+			},
+			{
+				action = "Modified",
+				time = 1610376936,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1613048872,
+				user = "Ivan",
+			},
+			{
+				action = "Modified",
+				time = 1621517342,
+				user = "Bobby",
+			},
+			{
+				action = "Modified",
+				time = 1629391685,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1629705378,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1629819715,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1630576903,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1630671680,
+				user = "Gaby",
+			},
+			{
+				action = "Modified",
+				time = 1630674177,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1631107001,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1634909590,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1639739535,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1643102330,
+				user = "Lina",
+			},
+			{
+				action = "Modified",
+				time = 1665415594,
+				user = "Xaerial",
+			},
+		},
+		param_bindings = false,
+	}),
+	save_in = "Mod/Uqo4QkN",
+	PlaceObj('StoryBitReply', {
+		Text = T(772089123274, --[[ModItemStoryBit test Text]] "Wonderful!"),
+		param_bindings = false,
+		unique_id = 15,
+	}),
+	PlaceObj('StoryBitOutcome', {
+		Effects = {
+			PlaceObj('GiveExpeditionTameRewardToSurvivor', {
+				SpawnClass = "Shrieker_Manhunting",
+				param_bindings = false,
+			}),
+		},
+		Weight = 80,
+		param_bindings = false,
+	}),
+}),
 }
