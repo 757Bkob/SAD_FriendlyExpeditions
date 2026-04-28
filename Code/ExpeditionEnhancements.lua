@@ -1,3 +1,15 @@
+function Bkob_Log_FE(hard_string,var)
+	DebugPrint(hard_string)
+	if var then
+		DebugPrint(var)
+	end
+	DebugPrint("\n")
+	if EE_debug == 'all' then
+		print(hard_string)
+		print(var)
+	end
+end
+
 
 function GetTameableSpawnClasses()
 	local spawn_classes
@@ -46,8 +58,8 @@ function UnitExpedition:AddExpeditionTameReward(spawn_class,name)
 end
 
 function ExpeditionBalloon:AddExpeditionTameReward(spawn_class,name,unit)
-	print("Added a tame reward to an expedition!")
-	local to_add  = {class = spawn_class, name = name or "",who = unit}
+	Bkob_Log_FE("Added a tame reward to an expedition!")
+	local to_add  = {class = spawn_class, name = name or false,who = unit}
 	if not self.exp_tame_rewards then
 		self.exp_tame_rewards = {}
 	end
@@ -61,7 +73,7 @@ function GiveExpeditionTameRewardToSurvivor:GetError()
 end
 
 function Building:SpawnAround(class,who,name)
-	print("Starting to spawn a unit around a building!")
+	Bkob_Log_FE("Starting to spawn a unit around a building!")
     local spawn_def = SpawnDefs['spawn_nearby']
 	local def = class and g_Classes[class]
 	local instance = {}
@@ -71,7 +83,7 @@ function Building:SpawnAround(class,who,name)
 	if who and IsKindOf(def,'UnitAnimal') then
 		instance.PostSpawn = function(self,obj,target,context)
 				if not obj.Tameable then
-					print("Animal can't be tamed")
+					Bkob_Log_FE("Animal can't be tamed")
 					return
 				end
 				obj:CheatResearch()
@@ -97,17 +109,19 @@ AppendClass.ExpeditionBalloon = {
 }
 
 function ExpeditionBalloon:SpawnAround(class,who,name)
-	print("Starting to spawn a unit around a building!")
+	Bkob_Log_FE("Starting to spawn a unit around a building!")
     local spawn_def = SpawnDefs['spawn_nearby']
 	local def = class and g_Classes[class]
 	local instance = {}
 	instance.SpawnClass = class
 	instance.location = self
-	instance.name = name or def.DisplayName
+	if name then
+		instance.name = name
+	end
 	if who and IsKindOf(def,'UnitAnimal') then
 		instance.PostSpawn = function(self,obj,target,context)
 				if not obj.Tameable then
-					print("Animal can't be tamed")
+					Bkob_Log_FE("Animal can't be tamed")
 					return
 				end
 				obj:CheatResearch()
@@ -125,7 +139,7 @@ end
 
 -- At this point in the code, we still know who the passenger is
 function ExpeditionBalloon:DropExpeditionResources()
-	print("Doing the usual expedition dropping of stuff!")
+	Bkob_Log_FE("Doing the usual expedition dropping of stuff!")
 	local params = { jump_from = self , quiet = true}
 	local drop = not self.destroyed_on_expedition
 	if drop then
@@ -176,14 +190,15 @@ function ExpeditionBalloon:DropExpeditionResources()
 			end
 		end
 	end
-	print("Giving tame rewards!")
+	Bkob_Log_FE("Giving tame rewards!")
 	if #self.exp_tame_rewards then
-		print("We have at least one tamed unit to spawn!")
+		Bkob_Log_FE("We have at least one tamed unit to spawn!")
 		for _,tame in ipairs(self.exp_tame_rewards) do
-			print("Trying to spawn a tamed "..tame.class.."!")
+			Bkob_Log_FE("Trying to spawn a tamed "..tame.class.."!")
+			Bkob_Log_FE("Name check ",tame.name)
 			self:SpawnAround(tame.class,tame.who,tame.name)
 		end
 	end
 	self.exp_tame_rewards = {}
-	print("Done with tame rewards!")
+	Bkob_Log_FE("Done with tame rewards!")
 end
