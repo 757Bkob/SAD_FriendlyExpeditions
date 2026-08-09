@@ -84,7 +84,7 @@ PlaceObj('ModItemExpeditionPreset', {
 			Season = set( "Winter" ),
 		}),
 	},
-	RelevantSkills = set( "Combat" ),
+	RelevantSkills = set( "Combat", "Farming" ),
 	StoryBits = {
 		PlaceObj('ExpeditionStoryBitWeight', {
 			'StoryBit', "Site_HuntingGrounds_MeatHides",
@@ -818,6 +818,7 @@ PlaceObj('ModItemFolder', {
 PlaceObj('ModItemExpeditionPreset', {
 	DisplayImage = "UI/Messages/Expeditions/exp_sound_wave",
 	Expiration = 3600000,
+	FoundByExploration = true,
 	Icon = "UI/Icons/Expeditions/sound_wave",
 	NameColor = 4281968595,
 	OneInstanceOnly = true,
@@ -843,10 +844,10 @@ PlaceObj('ModItemFolder', {
 		Enabled = true,
 		FxAction = "UINotificationExpedition",
 		NotificationText = T(831213253315, --[[ModItemStoryBit Site_Shrieker NotificationText]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		PopupFxAction = "MessagePopup",
 		ScriptDone = true,
 		SelectObject = false,
-		SuppressTime = 960000,
 		Text = T(194940582683, --[[ModItemStoryBit Site_Shrieker Text]] "A spike-tailed insect has made a small lair between some rocks. It looks to be alone... for now.\n\nThis might be a good chance to observe its kind from a safe distance."),
 		Title = T(918761004266, --[[ModItemStoryBit Site_Shrieker Title]] "A spike-tailed insect"),
 		UseObjectImage = true,
@@ -990,6 +991,13 @@ PlaceObj('ModItemFolder', {
 		}),
 		save_in = "Mod/Uqo4QkN",
 		PlaceObj('StoryBitReply', {
+			Prerequisites = {
+				PlaceObj('CheckTech', {
+					Negate = true,
+					Tech = "FieldShrieker",
+					param_bindings = false,
+				}),
+			},
 			Text = T(864320467667, --[[ModItemStoryBit Site_Shrieker Text]] "Observe away! It may be useful."),
 			param_bindings = false,
 			unique_id = 11,
@@ -998,6 +1006,10 @@ PlaceObj('ModItemFolder', {
 			Effects = {
 				PlaceObj('ResearchTechEffect', {
 					TechId = "FieldShrieker",
+					param_bindings = false,
+				}),
+				PlaceObj('StoryBitActivate', {
+					Id = "Site_Shrieker",
 					param_bindings = false,
 				}),
 			},
@@ -1011,6 +1023,10 @@ PlaceObj('ModItemFolder', {
 				PlaceObj('CheckSkillInclination', {
 					Inclination = "Forbidden",
 					Skill = "Combat",
+					param_bindings = false,
+				}),
+				PlaceObj('CheckTech', {
+					Tech = "FieldShrieker",
 					param_bindings = false,
 				}),
 			},
@@ -1033,6 +1049,10 @@ PlaceObj('ModItemFolder', {
 					Amount = 4,
 					Condition = "<=",
 					Skill = "Combat",
+					param_bindings = false,
+				}),
+				PlaceObj('CheckTech', {
+					Tech = "FieldShrieker",
 					param_bindings = false,
 				}),
 			},
@@ -1070,6 +1090,10 @@ PlaceObj('ModItemFolder', {
 					Amount = 5,
 					Condition = ">=",
 					Skill = "Combat",
+					param_bindings = false,
+				}),
+				PlaceObj('CheckTech', {
+					Tech = "FieldShrieker",
 					param_bindings = false,
 				}),
 			},
@@ -1118,6 +1142,10 @@ PlaceObj('ModItemFolder', {
 							param_bindings = false,
 						}),
 					},
+					param_bindings = false,
+				}),
+				PlaceObj('CheckTech', {
+					Tech = "FieldShrieker",
 					param_bindings = false,
 				}),
 			},
@@ -1169,6 +1197,10 @@ PlaceObj('ModItemFolder', {
 							param_bindings = false,
 						}),
 					},
+					param_bindings = false,
+				}),
+				PlaceObj('CheckTech', {
+					Tech = "FieldShrieker",
 					param_bindings = false,
 				}),
 			},
@@ -1569,7 +1601,7 @@ PlaceObj('ModItemExpeditionPreset', {
 	},
 	UILineColor = 4293083197,
 	description = T(189963326450, --[[ModItemExpeditionPreset LoudBang description]] "The source of the loud bang should be somewhere around here."),
-	display_name = T(461126114505, --[[ModItemExpeditionPreset LoudBang display_name]] "Loud bang [FFE]"),
+	display_name = T(461126114505, --[[ModItemExpeditionPreset LoudBang display_name]] "Loud bang [FFE+]"),
 	group = "Default",
 	id = "LoudBang",
 	save_in = "Mod/Uqo4QkN",
@@ -1588,7 +1620,6 @@ PlaceObj('ModItemFolder', {
 		PopupFxAction = "MessagePopup",
 		ScriptDone = true,
 		SelectObject = false,
-		Sets = set( "Negative" ),
 		Text = T(659754359609, --[[ModItemStoryBit Site_Loudband_Stunned_Wildlife_Defeat Text]] "I tried to gently break an animal out of it's stupor.... only to be met with aggression!\n\nUnfortunately, I was quite close to the thing... so I'm quite hurt.\n\nI barely escaped with my life!"),
 		Title = T(772290214095, --[[ModItemStoryBit Site_Loudband_Stunned_Wildlife_Defeat Title]] "Defeat!"),
 		UseObjectImage = true,
@@ -2267,6 +2298,7 @@ PlaceObj('ModItemExpeditionPreset', {
 	FoundByExplorationWeight = 50,
 	Icon = "UI/Icons/Expeditions/palm_trees",
 	NameColor = 4291056650,
+	OneInstanceOnly = true,
 	StoryBits = {
 		PlaceObj('ExpeditionStoryBitWeight', {
 			'StoryBit', "grazing_fields_camels",
@@ -2294,9 +2326,13 @@ PlaceObj('ModItemFolder', {
 	'NameColor', RGBA(236, 128, 24, 255),
 }, {
 	PlaceObj('ModItemStoryBit', {
+		Category = "Exploration",
+		Enabled = true,
 		NotificationTitle = T(334416212883, --[[ModItemStoryBit site_grazing_fields_hunt_failure NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Text = T(413130945335, --[[ModItemStoryBit site_grazing_fields_hunt_failure Text]] "The herd seemed quite invested in not letting me get any of them...\nWorst case, they fought back!\n\nI left before I could suffer any major wounds."),
 		Title = T(759736986954, --[[ModItemStoryBit site_grazing_fields_hunt_failure Title]] "Failure"),
+		group = "Expedition_FollowUP",
 		id = "site_grazing_fields_hunt_failure",
 		max_reply_id = 9,
 		save_in = "Mod/Uqo4QkN",
@@ -2326,9 +2362,13 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	PlaceObj('ModItemStoryBit', {
+		Category = "Exploration",
+		Enabled = true,
 		NotificationTitle = T(173971592982, --[[ModItemStoryBit site_grazing_fields_hunt_success NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Text = T(872926454072, --[[ModItemStoryBit site_grazing_fields_hunt_success Text]] "I set a diversion and the herd took the bait.\nThey started running away, and I managed to trip the stragglers.\n\nAs I was butchering and cleaning the body, a very eerie calm descended....\nRegardless we now have some food for the colony!"),
 		Title = T(559720591325, --[[ModItemStoryBit site_grazing_fields_hunt_success Title]] "Failure"),
+		group = "Expedition_FollowUP",
 		id = "site_grazing_fields_hunt_success",
 		max_reply_id = 11,
 		save_in = "Mod/Uqo4QkN",
@@ -2358,9 +2398,13 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	PlaceObj('ModItemStoryBit', {
+		Category = "Exploration",
+		Enabled = true,
 		NotificationTitle = T(231210872623, --[[ModItemStoryBit site_grazing_fields_hunt_failure_large NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Text = T(338125021256, --[[ModItemStoryBit site_grazing_fields_hunt_failure_large Text]] "The herd seemed quite invested in not letting me get any of them...\nWorst case, they fought back!\n\nThey caught me and made sure to give me many solid wounds....\nI'm lucky to escape with my life!"),
 		Title = T(197883140733, --[[ModItemStoryBit site_grazing_fields_hunt_failure_large Title]] "Failure"),
+		group = "Expedition_FollowUP",
 		id = "site_grazing_fields_hunt_failure_large",
 		max_reply_id = 10,
 		save_in = "Mod/Uqo4QkN",
@@ -2400,7 +2444,10 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	PlaceObj('ModItemStoryBit', {
+		Category = "Exploration",
+		Enabled = true,
 		NotificationTitle = T(969100372924, --[[ModItemStoryBit grazing_fields_camels NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Prerequisites = {
 			PlaceObj('CheckRegion', {
 				Negate = true,
@@ -2410,6 +2457,7 @@ PlaceObj('ModItemFolder', {
 		},
 		Text = T(787313851048, --[[ModItemStoryBit grazing_fields_camels Text]] "There are some very mild mannered quadrupedal animals in the area!\n\nToday there seems to be a larger than normal grouping of creatures slightly larger than me, with one or two humps on it's back.\nHow should I proceed?"),
 		Title = T(316903059860, --[[ModItemStoryBit grazing_fields_camels Title]] "An Herbivore!"),
+		group = "Expedition_FollowUP",
 		id = "grazing_fields_camels",
 		max_reply_id = 6,
 		save_in = "Mod/Uqo4QkN",
@@ -2648,7 +2696,10 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	PlaceObj('ModItemStoryBit', {
+		Category = "Exploration",
+		Enabled = true,
 		NotificationTitle = T(528468034178, --[[ModItemStoryBit grazing_fields_shogu NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Prerequisites = {
 			PlaceObj('CheckRegion', {
 				Negate = true,
@@ -2658,6 +2709,7 @@ PlaceObj('ModItemFolder', {
 		},
 		Text = T(829355721117, --[[ModItemStoryBit grazing_fields_shogu Text]] "There is a herd of rather portly four legged creatures here today.\nTheir noses are round and quite long....\n\nHow should I proceed?"),
 		Title = T(614765790325, --[[ModItemStoryBit grazing_fields_shogu Title]] "An Herbivore!"),
+		group = "Expedition_ANewSite",
 		id = "grazing_fields_shogu",
 		max_reply_id = 11,
 		save_in = "Mod/Uqo4QkN",
@@ -2896,7 +2948,10 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	PlaceObj('ModItemStoryBit', {
+		Category = "Exploration",
+		Enabled = true,
 		NotificationTitle = T(288172924175, --[[ModItemStoryBit grazing_fields_tecatli NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Prerequisites = {
 			PlaceObj('CheckRegion', {
 				Negate = true,
@@ -2906,6 +2961,7 @@ PlaceObj('ModItemFolder', {
 		},
 		Text = T(702457560061, --[[ModItemStoryBit grazing_fields_tecatli Text]] "There is a herd of bipedal scaled... animals?\nIt's hard to tell if these things are cold or hot blooded....\n\nBut I do recognize their teeth as sharp and carnivorous...\nOdd they aren't hunting the other species in the area\n\nHow should I proceed?"),
 		Title = T(120811058102, --[[ModItemStoryBit grazing_fields_tecatli Title]] "An Herbivore!"),
+		group = "Expedition_ANewSite",
 		id = "grazing_fields_tecatli",
 		max_reply_id = 16,
 		save_in = "Mod/Uqo4QkN",
@@ -3144,16 +3200,20 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	PlaceObj('ModItemStoryBit', {
+		Category = "Expedition",
+		Enabled = true,
 		NotificationTitle = T(378021600463, --[[ModItemStoryBit grazing_fields_gujo NotificationTitle]] "Expedition update: <ExplorationSiteName>"),
+		OneTime = false,
 		Prerequisites = {
 			PlaceObj('CheckRegion', {
 				Negate = true,
-				Region = set( "Desertum" ),
+				Region = set( "Sobrius" ),
 				param_bindings = false,
 			}),
 		},
 		Text = T(769196165794, --[[ModItemStoryBit grazing_fields_gujo Text]] "As I touched down, I found many many giant birds chasing the regular inhabitants.\n\nThe birds themselves appeared to be in different stages of malnourishment, and they should be quite easy to hunt or tame.\nWhat should I do? "),
 		Title = T(126693164697, --[[ModItemStoryBit grazing_fields_gujo Title]] "An Herbivore!"),
+		group = "Expedition_ANewSite",
 		id = "grazing_fields_gujo",
 		max_reply_id = 21,
 		save_in = "Mod/Uqo4QkN",
@@ -3412,187 +3472,4 @@ PlaceObj('ModItemFolder', {
 		}),
 	}),
 	}),
-PlaceObj('ModItemExpeditionPreset', {
-	FoundByExplorationWeight = 100000,
-	Obsolete = true,
-	StoryBits = {
-		PlaceObj('ExpeditionStoryBitWeight', {
-			'StoryBit', "test",
-		}),
-	},
-	description = T(365482481022, --[[ModItemExpeditionPreset test description]] "test"),
-	display_name = T(907449004436, --[[ModItemExpeditionPreset test display_name]] "test"),
-	id = "test",
-	mod_version_major = 1,
-	save_in = "Mod/Uqo4QkN",
-}),
-PlaceObj('ModItemStoryBit', {
-	Category = "Expedition",
-	Enabled = true,
-	FxAction = "UINotificationExpedition",
-	HasNotification = false,
-	NotificationText = T(452344966145, --[[ModItemStoryBit test NotificationText]] "Expedition complete: <ExplorationSiteName>"),
-	Obsolete = true,
-	OneTime = false,
-	PopupFxAction = "MessagePopup",
-	ScriptDone = true,
-	SelectObject = false,
-	Text = T(436458298190, --[[ModItemStoryBit test Text]] "we found something"),
-	Title = T(283449227190, --[[ModItemStoryBit test Title]] "Victory!"),
-	UseObjectImage = true,
-	group = "Expedition_FollowUP",
-	id = "test",
-	max_reply_id = 15,
-	qa_info = PlaceObj('PresetQAInfo', {
-		data = {
-			{
-				action = "Modified",
-				time = 1583342170,
-				user = "Svetlio",
-			},
-			{
-				action = "Modified",
-				time = 1583343860,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1583483931,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1585229761,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1593085279,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1594825884,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1601282702,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1602664512,
-				user = "Vihar",
-			},
-			{
-				action = "Modified",
-				time = 1608545552,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1609927791,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1609932797,
-				user = "Vihar",
-			},
-			{
-				action = "Modified",
-				time = 1610034862,
-				user = "Gaby",
-			},
-			{
-				action = "Modified",
-				time = 1610376936,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1613048872,
-				user = "Ivan",
-			},
-			{
-				action = "Modified",
-				time = 1621517342,
-				user = "Bobby",
-			},
-			{
-				action = "Modified",
-				time = 1629391685,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1629705378,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1629819715,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1630576903,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1630671680,
-				user = "Gaby",
-			},
-			{
-				action = "Modified",
-				time = 1630674177,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1631107001,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1634909590,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1639739535,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1643102330,
-				user = "Lina",
-			},
-			{
-				action = "Modified",
-				time = 1665415594,
-				user = "Xaerial",
-			},
-		},
-		param_bindings = false,
-	}),
-	save_in = "Mod/Uqo4QkN",
-	PlaceObj('StoryBitReply', {
-		Text = T(772089123274, --[[ModItemStoryBit test Text]] "Wonderful!"),
-		param_bindings = false,
-		unique_id = 15,
-	}),
-	PlaceObj('StoryBitOutcome', {
-		Effects = {
-			PlaceObj('GiveExpeditionTameRewardToSurvivor', {
-				SpawnClass = "Shrieker_Manhunting",
-				param_bindings = false,
-			}),
-		},
-		Weight = 80,
-		param_bindings = false,
-	}),
-}),
 }
